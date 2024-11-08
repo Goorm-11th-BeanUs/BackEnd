@@ -1,0 +1,73 @@
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        highlight_sql: true
+        format_sql: true
+        dialect:
+        hbm2ddl:
+          auto: update
+        use_sql_comments: true
+    defer-datasource-initialization: true
+  datasource:
+    url:
+    username:
+    password:
+    driver-class-name:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-name:
+            client-id:
+            client-secret:
+            redirect-uri:
+            authorization-grant-type:
+            scope:
+          kakao:
+            client-id: 
+            client-secret:
+            client-authentication-method:
+            redirect-uri:
+            authorization-grant-type:
+            client-name:
+            scope:
+        provider:
+          kakao:
+            authorization-uri:
+            token-uri:
+            user-info-uri:
+            user-name-attribute:
+  jwt:
+    issuer:
+    secret:
+    refresh-expiration:
+    access-expiration:
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql:
+              BasicBinder: trace
+              BasicExtractor: trace
+              BasicType: trace
+              BasicValue: trace
+              IdentifierValue: trace
+              StringType: trace
+              TimestampType: trace
+              Type: trace
+              Value: trace
+server:
+  servlet:
+    session:
+      cookie:
+        same-site: none
+  ssl:
+    key-store:
+    key-store-type:
+    key-store-password:
+  port:
