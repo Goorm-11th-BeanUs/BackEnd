@@ -71,11 +71,12 @@ public class SecurityConfig {
                         CorsConfiguration configuration = new CorsConfiguration();
 
                         configuration.setAllowedOrigins(
+                                //CORS 허용 주소
                                 Arrays.asList(
-                                        "http://m2316homepc.ddns.net:5173",
-                                        "https://jealth.store"
+                                        "http://localhost:5173"
                                 )
                         );
+
                         configuration.setAllowedMethods(Collections.singletonList("*"));
                         configuration.setAllowCredentials(true);
                         configuration.setAllowedHeaders(Collections.singletonList("*"));

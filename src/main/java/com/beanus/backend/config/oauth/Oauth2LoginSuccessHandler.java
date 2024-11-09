@@ -79,7 +79,7 @@ public class Oauth2LoginSuccessHandler  extends SimpleUrlAuthenticationSuccessHa
         response.setHeader("Pragma", "no-cache");
         response.setDateHeader("Expires", 0);
         response.addCookie(jwtUtil.createCookie("refreshToken", refreshToken));
-        response.sendRedirect("https://jealth.store/oauth2/redirect");
+        response.sendRedirect("http://localhost:5173/oauth2/redirect");
         response.setStatus(HttpStatus.OK.value());
     }
 
