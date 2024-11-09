@@ -38,6 +38,7 @@ public class JWTFilter extends OncePerRequestFilter {
 
         // accessToken 인증이 필요 없는 요청 다음 필터로 넘김
         if(
+                "/loginOauth".equals(request.getRequestURI()) || //테스트를 위한 임시 주소
                 "/api/v1/login".equals(request.getRequestURI()) ||
                 "/api/v1/signup".equals(request.getRequestURI()) ||
                 "/api/v1/refresh".equals(request.getRequestURI()) ||
